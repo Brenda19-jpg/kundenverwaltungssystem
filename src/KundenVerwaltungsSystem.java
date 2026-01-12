@@ -16,28 +16,30 @@ public class KundenVerwaltungsSystem {
         adresse2.setStadt("AES");
 
         // Kunden:
-        NatuerlichePerson privatKunde1 = new NatuerlichePerson("Brenda", adresse1, Geschlecht.WEIBLICH, "Frau");
-        NatuerlichePerson privatKunde2 = new NatuerlichePerson("Thomas", adresse1, Geschlecht.MAENNLICH, "Herr");
-        NatuerlichePerson privatKunde3 = new NatuerlichePerson("Tatiana", adresse1, Geschlecht.WEIBLICH, "Frau");
-        NatuerlichePerson privatKunde4 = new NatuerlichePerson("Christiana", adresse1, Geschlecht.WEIBLICH, "Frau");
-        NatuerlichePerson privatKunde5 = new NatuerlichePerson("Yasmine", adresse1, Geschlecht.WEIBLICH, "Frau");
-        NatuerlichePerson privatKunde6 = new NatuerlichePerson("Leslie", adresse1, Geschlecht.WEIBLICH, "Frau");
+        NatuerlichePerson privatKunde1 = new NatuerlichePerson("Brenda", adresse1, Geschlecht.WEIBLICH);
+        NatuerlichePerson privatKunde2 = new NatuerlichePerson("Thomas", adresse2, Geschlecht.MAENNLICH);
+        NatuerlichePerson privatKunde3 = new NatuerlichePerson("Tatiana", adresse1, Geschlecht.WEIBLICH);
+        NatuerlichePerson privatKunde4 = new NatuerlichePerson("Christiana", adresse2, Geschlecht.WEIBLICH);
+        NatuerlichePerson privatKunde5 = new NatuerlichePerson("Yasmine", adresse1, Geschlecht.WEIBLICH);
+        NatuerlichePerson privatKunde6 = new NatuerlichePerson("Leslie", adresse1, Geschlecht.WEIBLICH);
 
         JuristischePerson firma1 = new JuristischePerson("Brenda-Firma", adresse2, Rechtsform.GMBH, true);
         JuristischePerson firma2 = new JuristischePerson("AES-Firma", adresse2, Rechtsform.AG, true);
-        JuristischePerson firma3 = new JuristischePerson("Tatiana-Firma", adresse2, Rechtsform.GMBH, false);
+        JuristischePerson firma3 = new JuristischePerson("Tatiana-Firma", adresse1, Rechtsform.GMBH, false);
         JuristischePerson firma4 = new JuristischePerson("Christiana-Firma", adresse2, Rechtsform.EINZEL_UNTERNEHMEN, false);
         JuristischePerson firma5 = new JuristischePerson("Yasmine-Firma", adresse2, Rechtsform.AG, true);
         JuristischePerson firma6 = new JuristischePerson("Leslie-Firma", adresse2, Rechtsform.GMBH, false);
-        JuristischePerson firma7 = new JuristischePerson("THB", adresse2, Rechtsform.GMBH, true);
+        JuristischePerson firma7 = new JuristischePerson("THB", adresse1, Rechtsform.GMBH, true);
 
         // Bestellungen:
         privatKunde1.ergaenzeBestellung(2000);
         privatKunde1.ergaenzeBestellung(3500);
+        privatKunde1.bestellungZurueckgeben(1000);
         privatKunde2.ergaenzeBestellung(10000);
         privatKunde3.ergaenzeBestellung(3500);
         privatKunde3.ergaenzeBestellung(200);
         privatKunde4.ergaenzeBestellung(35000);
+        privatKunde4.bestellungZurueckgeben(5000);
         privatKunde5.ergaenzeBestellung(1000);
         privatKunde6.ergaenzeBestellung(1500);
 
